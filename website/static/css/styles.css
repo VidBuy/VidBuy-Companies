@@ -1,0 +1,136 @@
+body{
+  font-family: "Segoe UI";
+  background: #292d4e;/*linear-gradient(to left, mediumpurple, skyblue);*/
+  color: aliceblue;
+}
+
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header div{
+	aspect-ratio: 1/1;
+	border-radius: 10pc;
+	background: orange;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bolder;
+}
+header h3 span{
+	background: #00aaffc7;
+	padding: 5px;
+	font-size: 14px;
+	border-radius: 0.5rem;
+	font-weight: bolder;
+}
+.a-company{
+	background: #0000008f;
+	border: 1px solid gainsboro;
+	border-radius: 0.5rem;
+	padding: 10px;
+	margin: 10px;
+}
+
+.a-company-actions{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.a-company-actions button{
+	padding: 10px;
+	border: 0;
+	outline: none;
+	width: 100px;
+	border-radius: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.welcome, #login{
+	display: grid;
+	place-items: center;
+	height: 100vh;
+}
+
+#login form{
+	display: grid;
+	place-items: center;
+}
+h1 span{
+  font-style: italic;
+  background: #345ca0ba;
+  padding: 0 10px 0 10px;
+  border-radius: 1rem;
+  color: #e59092;
+}
+.input-container form{
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+.input-sub-cont{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.input-style-1s2{
+	padding: 15px;
+	outline: none;
+	border: 0;
+	border-radius: 1rem;
+	margin: 5px;
+	width: 90%;
+	transition: 0.3s ease-in-out;
+}
+.input-style-1s2:hover{
+	box-shadow: 0 0 1rem skyblue;
+	border: 1px solid skyblue;
+}
+.file-upload{
+	border: 5px dashed skyblue;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.button-1s2 {
+	outline: none;
+	border: 0;
+	box-shadow: 0 0 3rem skyblue;
+	background: skyblue;
+	width: 200px;
+	color: white;	
+	padding: 10px;
+	font-size: 23px;
+	border-radius: 1rem;
+	transition: 0.3s ease-in-out;
+}
+.button-1s2:hover{
+	border: 2px solid skyblue;
+	color: skyblue;
+	background: transparent;
+	box-shadow: 0 0 0rem skyblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

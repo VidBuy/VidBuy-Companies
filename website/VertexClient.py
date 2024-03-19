@@ -36,13 +36,13 @@ try:
 		def find_all(table, column, value):
 			table = table
 			find_pair = {column: value}
-			find_pair = encrypt.encrypter(str(find_pair))
+			find_pair = encrypt_k7s2.encrypter(str(find_pair))
 			return eval(request_then_text(url=f'{from_}/handler/find-all/{VXD_INFO}/{table}/{find_pair}'))
 
 		def add_entry(table, entry):
 			table = table
 			# try:
-			entry = encrypt.encrypter(str(entry))
+			entry = encrypt_k7s2.encrypter(str(entry))
 
 			return eval(request_then_text(url=f'{from_}/handler/add-entry/{VXD_INFO}/{table}/{entry}'))
 			
@@ -53,12 +53,12 @@ try:
 		def find_one(table, column, value):
 			table = table
 			find_pair = {column: value}
-			find_pair = encrypt.encrypter(str(find_pair))
+			find_pair = encrypt_k7s2.encrypter(str(find_pair))
 
 			return eval(request_then_text(url=f'{from_}/handler/find-one/{VXD_INFO}/{table}/{find_pair}'))
 
 		def update_entry(table, column, entry):
-			entry = encrypt.encrypter(str(entry))
+			entry = encrypt_k7s2.encrypter(str(entry))
 			column = column
 			table = table
 			return eval(request_then_text(url=f'{from_}/handler/update-entry/{VXD_INFO}/{table}/{column}/{entry}'))

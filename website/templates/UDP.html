@@ -1,3 +1,7 @@
+{% extends 'base.html' %}
+
+{% block title %} Dashboard - {{ CurrentUser['name'] }} {% endblock %}
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +9,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CAC Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
 <header>
-	<div>UI</div>
+	<div>{{ (CurrentUser['name'][0] + CurrentUser['name'][1]).upper() }}</div>
 	<h3>VidBuy <span>Companies</span></h3>
 	<p>&nbsp;</p>
 </header>
@@ -86,3 +90,4 @@
 
 </body>
 </html>
+{% endblock content %}

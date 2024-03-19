@@ -126,6 +126,13 @@ def initialize_app():
             gender = request.form.get("gender")
             password1 = request.form.get('password')
             password2 = request.form.get('password2')
+            soo = request.form.get("state_of_origin")
+            sor = request.form.get("state_of_residence")
+            dob = request.form.get("date_of_birth")
+            country = request.form.get("country")
+            gender = request.form.get("gender")
+            individuality_status = request.form.get("individuality_status")
+
 
             user = dbORM.find_one("USER", 'email', email)
 
@@ -147,13 +154,13 @@ def initialize_app():
                     'email': email,
                     'password': password1,
                     'age': age,
-                    'state_of_origin': 'NULL',
-                    'state_of_residence': 'NULL',
-                    'date_of_birth': 'NULL',
-                    'country': 'NULL',
-                    'gender': 'NULL',
-                    'individuality_status': 'NULL',
-                    'app_theme': 'NULL'
+                    'state_of_origin': soo,
+                    'state_of_residence': sor,
+                    'date_of_birth': dob,
+                    'country': country,
+                    'gender': gender,
+                    'individuality_status': individuality_status,
+                    'app_theme': 'light'
                 }
 
 

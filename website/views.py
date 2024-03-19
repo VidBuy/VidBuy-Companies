@@ -47,7 +47,7 @@ def go_to(screen_id):
 
   
 
-  return render_template("dashboard.html",
+  return render_template("UDP.html",
     ScreenID = screen_id,
     CurrentUser = User[f'{current_user.id}'],
     CurrentDate=clean_date(formatted_date),
@@ -57,11 +57,8 @@ def go_to(screen_id):
 
 @views.route('/')
 def index():
-  return render_template("base.html")
+  return render_template("INDEX.html")
 
-@views.route('/home')
-def home():
-  return render_template("home.html")
 
 @views.route('/dashboard')
 def viewDashBoard():

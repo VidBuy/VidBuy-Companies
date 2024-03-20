@@ -58,12 +58,17 @@ header h3 span{
 
 
 
-.welcome, #login{
+.welcome, #login, #new-company{
 	display: grid;
 	place-items: center;
 	height: 100vh;
 }
-
+#new-company{
+	display: none;
+	background: #28458659;
+  border-radius: 1rem;
+  margin-top: 30px;
+}
 #login form{
 	display: grid;
 	place-items: center;

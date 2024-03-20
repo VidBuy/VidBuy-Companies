@@ -18,51 +18,40 @@
 	<p>&nbsp;</p>
 </header>
 <h2>Your Companies</h2>
+{% if Company %}
+	{% for cm in Company %}
+		<div class="a-company">
+			<div class="a-company-details">
+				<h2>{{ cm['name'] }}</h2>
+				<p>{{ cm['description'] }}</p>
+			</div>
 
-<div class="a-company">
-	<div class="a-company-details">
-		<h2>Ola and Sons Metals</h2>
-		<p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </p>
-	</div>
+			<div class="a-company-actions">
+				<button style="color: #00ff00; background: #075307;"><a href="/view/{{ cm['id'] }}">View</a></button>
+				<button style="color: #ff0000; background: #530707;"><a href="/remove/{{ cm['id'] }}">Remove</a></button>
+			</div>
+		</div>
+	{% endfor %}
 
-	<div class="a-company-actions">
-		<button style="color: #00ff00; background: #075307;">View</button>
-		<button style="color: #ff0000; background: #530707;">Remove</button>
-	</div>
+{% else %}
+	<br>
+	<br>
+	<p style="color: #cdc3c3;">No companies yet?</p>
+	<br>
+	<br>
+{% endif %}
+<div style="display: flex; align-items: center; justify-content: space-around;">
+	<button class="button-1s2 new-company-trigger">
+		New Company
+	</button>
+
+	<button class="button-1s2 new-company-trigger-close" style="background: #ed3d3d; box-shadow: 0 0 3rem #ed3d3d; width: 40px; display: none;">
+		&times;
+	</button>
 </div>
-<div class="a-company">
-	<div class="a-company-details">
-		<h2>Ola and Sons Metals</h2>
-		<p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </p>
-	</div>
 
-	<div class="a-company-actions">
-		<button style="color: #00ff00; background: #075307;">View</button>
-		<button style="color: #ff0000; background: #530707;">Remove</button>
-	</div>
-</div>
-<div class="a-company">
-	<div class="a-company-details">
-		<h2>Ola and Sons Metals</h2>
-		<p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </p>
-	</div>
 
-	<div class="a-company-actions">
-		<button style="color: #00ff00; background: #075307;">View</button>
-		<button style="color: #ff0000; background: #530707;">Remove</button>
-	</div>
-</div>
-<div class="a-company">
-	<div class="a-company-details">
-		<h2>Ola and Sons Metals</h2>
-		<p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </p>
-	</div>
 
-	<div class="a-company-actions">
-		<button style="color: #00ff00; background: #075307;">View</button>
-		<button style="color: #ff0000; background: #530707;">Remove</button>
-	</div>
-</div>
 
 
 <div class="input-container" id="new-company">
@@ -86,8 +75,10 @@
 
       <button class="button-1s2">Next</button>
     </form>
-  </div>
+</div>
 
+
+<script src="{{ url_for('static', filename='js/app-script.js') }}"></script>
 </body>
 </html>
 {% endblock content %}

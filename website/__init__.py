@@ -127,6 +127,7 @@ def initialize_app():
             password1 = request.form.get('password')
             password2 = request.form.get('password2')
             soo = request.form.get("state_of_origin")
+            age = request.form.get("age")
             sor = request.form.get("state_of_residence")
             dob = request.form.get("date_of_birth")
             country = request.form.get("country")

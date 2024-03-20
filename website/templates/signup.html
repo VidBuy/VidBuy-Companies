@@ -9,55 +9,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   <!-- <title></title> -->
+  <style type="text/css">
+    .input-text{
+      display: flex; align-items: center; justify-content: space-between;
+      width: 80%;
+      padding: 10px;
+      background: #f5f5f5;
+      border-radius: 1rem;
+      border: 2px solid skyblue;
+
+      transition: 0.2s ease-in-out;
+    }
+    .input-text input, .input-text select{
+      outline: none;
+      border: 0;
+      background: #f5f5f5;
+    }
+    .input-text span{
+      color: #044b63;
+    }
+  </style>
 </head>
 <body>
 
   <section id="login">
   <form method="POST" action="/signup">
-    <h1 align="center">Sign up</h1>
-    <!-- <p></p> -->
-    <input type="text" name="name" placeholder="Name" class="input-style-1s2">
+    <h1 style="font-size: 37px;" align="center">Sign up</h1>
+    <p>Fill in your details</p>
+    <div class="input-text">
+      <input type="text" name="name">
+      <span>Name</span>
+    </div>
     <br>
-    <input type="number" name="age" placeholder="Age" class="input-style-1s2">
+    <div class="input-text">
+      <input type="number" name="age" maxlength="2">
+      <span>Age</span>
+    </div>
     <br>
-    <div style="display: flex; align-items: center; justify-content: space-between;">
-      <input type="date" name="date_of_birth" class="input-style-1s2">
+    <div class="input-text">
+      <input type="date" name="date_of_birth">
       <span>Date of birth</span>
     </div>
     <br>
-    <select name="gender" class="input-style-1s2">
-      <option>Male</option>
-      <option>Female</option>
-      <option>Prefer not to say</option>
-    </select>
+    <div class="input-text">
+      <select name="gender">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Prefer not to say</option>
+      </select>
+      <span>Gender</span>
+    </div>
     <br>
-    <select name="state_of_origin" class="input-style-1s2">
-      <option>Abia</option>
-      <option>Adamawa</option>
-    </select>
+    <div class="input-text">
+      <select name="state_of_origin">
+        <option>Abia</option>
+        <option>Adamawa</option>
+      </select>
+      <span>State of origin</span>
+    </div>
     <br>
-    <select name="country" class="input-style-1s2">
-      <option>Togo</option>
-      <option>Benin Republic</option>
-      <option>Nigeria</option>
-      <option>Ghana</option>
-    </select>
+    <div class="input-text">
+      <select name="country">
+        <option>Togo</option>
+        <option>Benin Republic</option>
+        <option>Nigeria</option>
+        <option>Ghana</option>
+      </select>
+      <span>Country</span>
+    </div>
     <br>
-    <input type="email" name="email" placeholder="Email" class="input-style-1s2">
+    <div class="input-text">
+      <input type="email" name="email">
+      <span>Email</span>
+    </div>
     <br>
-    <select name="state_of_residence" class="input-style-1s2">
-      <option>Abia</option>
-      <option>Adamawa</option>
-    </select>
+    <div class="input-text">
+      <select name="state_of_residence">
+        <option>Abia</option>
+        <option>Adamawa</option>
+      </select>
+      <span>State of residence</span>
+    </div>
     <br>
-    <select name="individuality_status" class="input-style-1s2">
-      <option>Individual</option>
-      <option>Company</option>
-    </select>
+    <div class="input-text">
+      <select name="individuality_status">
+        <option>Individual</option>
+        <option>Company</option>
+      </select>
+      <span>Individuality</span>
+    </div>
     <br>
-    <input type="password" name="password1" placeholder="Password" class="input-style-1s2">
+    <div class="input-text">
+      <input type="password" name="password">
+      <span>Password</span>
+    </div>
     <br>
-    <input type="password" name="password2" placeholder="Confirm Password" class="input-style-1s2">
+    <div class="input-text">
+      <input type="password" name="password2">
+      <span>Confirm Password</span>
+    </div>
     <br>
     <br>
     <button class="button-1s2">Signup</button>

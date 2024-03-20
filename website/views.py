@@ -45,8 +45,13 @@ def go_to(screen_id):
     [duplicates_removed_list.append(x) for x in original_list if x not in duplicates_removed_list]
     return duplicates_removed_list
 
-  
+  if dbORM == None:
+  	def radFun(x_range):
+  		return random.choice(x_range)
 
+  	num1, num2, num3, num4, num5, num6 = radFun(range(10)), radFun(range(10)), radFun(range(10)), radFun(range(10)), radFun(range(10)), radFun(range(10))
+  	return render_template("page-error.html", eid=f"00x{num1}{num2}{num3}{num4}-{num5}{num6}", ecd="EC-002")
+  
   return render_template("UDP.html",
     ScreenID = screen_id,
     CurrentUser = User[f'{current_user.id}'],
@@ -57,7 +62,14 @@ def go_to(screen_id):
 
 @views.route('/')
 def index():
-  return render_template("INDEX.html")
+	if dbORM == None:
+	  	def radFun(x_range):
+	  		return random.choice(x_range)
+
+	  	num1, num2, num3, num4, num5, num6 = radFun(range(10)), radFun(range(10)), radFun(range(10)), radFun(range(10)), radFun(range(10)), radFun(range(10))
+	  	return render_template("page-error.html", eid=f"00x{num1}{num2}{num3}{num4}-{num5}{num6}", ecd="EC-002")
+
+	return render_template("INDEX.html")
 
 
 @views.route('/dashboard')

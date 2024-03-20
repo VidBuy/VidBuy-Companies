@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} Oops {% endblock %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+	<!-- <title></title> -->
+	<style type="text/css">
+		.box-info{
+			background: gainsboro;
+			padding: 10px;
+			border-radius: 0.5rem;
+			font-family: monospace;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+
+	<section id="login">
+		<h1>Oops <br><b>Something went wrong</b></h1>
+
+		<div class="box-info">
+			<p>Error ID: <b>{{ eid }}</b></p>
+			<p>Error Code: <b>{{ ecd }}</b></p>
+		</div>
+	</section>
+
+</body>
+</html>
+
+{% endblock content %}
